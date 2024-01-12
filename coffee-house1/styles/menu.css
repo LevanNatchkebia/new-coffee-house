@@ -1,0 +1,122 @@
+h1 {
+    color: var(--Text-Dark, #403F3D);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; 
+}
+
+h1 > span {
+    color: var(--Text-Accent, #B0907A);
+    font-style: italic;
+}
+
+.menu_list {
+    display: flex;
+    justify-content: center;
+    gap:8px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.menu_list > li {
+    display: flex;
+    padding: 8px 15px 8px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    border: 1px solid var(--Border-Light, #C1B6AD);
+    height: 46px;
+    color: var(--Text-Dark, #403F3D);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    cursor: pointer;
+}
+
+.menu_list > li > span {
+    padding: 0.3rem 0.5rem; 
+    border-radius: 50%;
+    background: var(--Border-Light, #C1B6AD);
+    font-size: 0.8em;
+}
+
+.products {
+    padding: 0 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.product_card {
+    display: flex;
+    flex-direction: column;
+    height: 506px;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid var(--Border-Light, #C1B6AD);
+    overflow: hidden;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    
+}
+
+.product_card > .img_div {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 40px;
+}
+
+.img_div > img{
+    border-radius: 40px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.coffee_description {
+    margin-top: 8.6px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.coffee_description > h4 {
+    color: var(--Text-Dark, #403F3D);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.coffee_description > p {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.product_card > span {
+    color: var(--Text-Dark, #403F3D);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; 
+    align-self: self-start;
+    margin-left: 20px;
+}
+
+.menu_list > .selected {
+    background: var(--Background-Container, #665F55);
+    color: #E1D4C9;
+}

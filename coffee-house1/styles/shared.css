@@ -1,0 +1,242 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1320px;
+    font-family: 'Inter', sans-serif;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #E1D4C9;
+}
+
+
+.header_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+        "logo burgerBtn"
+        "nav nav"
+        "nav nav"
+        "nav nav"
+        "nav nav"
+        "nav nav";
+    height: 100vh;
+}
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    
+    grid-area: logo;
+    align-self: start;
+    cursor: pointer;
+}
+
+.navigation_bar {
+    display: none;
+}
+
+.menu_visible {
+    display: flex;
+    grid-area: nav;
+    height: 100%;
+    background-color: #E1D4C9;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.menu_visible > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.navigation_links {
+    color: var(--Text-Dark, #403F3D);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navigation_links_MT {
+    color: var(--Text-Dark, #403F3D);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    cursor: pointer;
+}
+.menuLink {
+    margin-bottom: 140px;
+    color: var(--Text-Dark, #403F3D);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; 
+    margin-right:15px ;
+}
+.burger_btn {
+    border-radius: 100px;
+    border: 1px solid var(--Border-Dark, #665F55);  
+    width: 44px;
+    height: 44px;
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    grid-area: burgerBtn;
+    justify-self: end;
+    align-self: start;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.burger_gap {
+    position: relative
+
+}
+
+.burger_btn > div {
+    border-radius: 1rem;
+    height: 1px;
+    width: 16px;
+    background-color: var(--Text-Dark, #403F3D);
+    transition: 0.3s ease-in-out;
+    
+}
+
+.burger_btn1 {
+    border-radius: 1rem;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.burger_btn2 {
+    border-radius: 1rem;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+footer {
+    padding: 60px 16px;
+    border-radius: 40px;
+    background: var(--Background-Container, #665F55);
+    margin-top: 81px;
+}
+
+.footer_part1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer_part1 > h2 {
+    color: var(--Text-Light, #E1D4C9);
+    text-align: left;
+}
+
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+.social > a {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid var(--Border-Light, #C1B6AD);
+}
+
+.contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light, #E1D4C9);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    cursor: pointer;
+}
+
+.contact ul li 
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light, #E1D4C9);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.contact > h5 {
+    color: var(--Text-Light, #E1D4C9);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
