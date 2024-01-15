@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/shared.css">
     <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/menuResponsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -73,9 +74,45 @@
         <section class="products">
             
         </section>
+
+        <button class="load-more tablet-mobile">
+            <i class="fa-solid fa-arrow-rotate-right"></i>
+        </button>
     </main>
 
-
+    <div class="modal_wrapper">
+        <div class="modal">
+            <div class="modal_image">
+                <img class="product_modal_image" src="" alt="">
+            </div>
+            <div class="product_description">
+                <h3 class="product_title" ></h3>
+                <p class="product_description"></p>
+                <div class="size">
+                    <button class="product_size"></button>
+                    <button class="product_size"></button>
+                    <button class="product_size"></button>
+                </div>
+                <div class="additives">
+                    <button class="additive"></button>
+                    <button class="additive"></button>
+                    <button class="additive"></button>
+                </div>
+                <div class="total_price_container">
+                    <span class="total_price_text">Total:</span>
+                    <span class="total_price">                 </span>
+                </div>
+                <div class="modal_bottom">
+                    <p class="discount_info">
+                        The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+                    </p>
+                    <button class="close_modal_button">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer_part1">

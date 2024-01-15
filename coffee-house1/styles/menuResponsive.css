@@ -1,0 +1,49 @@
+@media screen and (min-width:600px) and (max-width:768px) {
+    h1, h1 > span {
+        font-size:60px;
+        line-height: 125%;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(2, 310px);
+        gap: 40px;
+    }
+
+    
+}
+
+@media screen and (min-width:600px) and (max-width:700px) {
+    .products {
+        padding: 0 19px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+
+
+@media screen and (min-width:701px) and (max-width:1439px) {
+    .products {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width:769px) {
+    .tablet-mobile {
+        display: none;
+    }
+}
+@media screen and (min-width:1440px) {
+    .products {
+        display: grid;
+        grid-template-columns: repeat(4, 310px);
+        gap: 40px;
+    }
+
+    
+}

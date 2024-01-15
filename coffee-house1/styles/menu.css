@@ -65,6 +65,7 @@ h1 > span {
     overflow: hidden;
     justify-content: space-between;
     padding-bottom: 20px;
+    width: 310px;
     
 }
 
@@ -119,4 +120,8 @@ h1 > span {
 .menu_list > .selected {
     background: var(--Background-Container, #665F55);
     color: #E1D4C9;
+}
+
+.hidden {
+    display: none;
 }

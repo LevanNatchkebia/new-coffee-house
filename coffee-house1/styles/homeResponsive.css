@@ -1,0 +1,189 @@
+@media screen and (min-width:600px) {
+    #start {
+        background-image: url('../assets/img-hero-tablet.png');
+        height: 644px;
+        padding: 100px 60px;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    .tablet {
+        display: block
+    }
+
+    h1 {
+        font-size: 72px;
+        line-height: 105%;
+    }
+    h1 > span {
+        font-size: 72px;
+        line-height: 105%;
+    }
+
+    #start > p {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .menuSectionBtn {
+        display: flex;
+        width: 200px;
+        padding: 20px 78px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    h2, h2 > span {
+        font-size: 60px;
+        line-height:125%;
+    }
+
+    .slider > img {
+        height: 480px;
+    }
+
+    .slider_text {
+        width: 480px;
+    }
+
+    .container > div > img {
+        scale: 1.05;
+    }
+    .app-play-store {
+        flex-direction: row;
+    }
+    .mobile_screen {
+        width: 630px;
+        margin: 0 auto;
+        margin-top: 58px;
+    }
+
+    .whole_slider_div > button {
+        width:60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border-radius: 100px;
+        border: 1px solid var(--Border-Dark, #665F55);
+        padding: 1.4rem;
+        align-self: center;
+        font-size: 1.1em;
+        font-weight: 200;
+        color: #403F3D;
+        cursor: pointer;
+    }
+    
+    
+}
+
+@media screen and (min-width:600px) and (max-width:720px ) {
+    #start {
+        height: 644px;
+        padding: 20px 30px;
+    }
+
+}
+
+@media screen and (min-width:769px){
+    #start {
+        background-image: url('../assets/img-hero.png');
+        padding: 100px 100px;
+    }
+
+    h1 {
+        width: 530px;
+    }
+
+    #start > p {
+        width: 530px;
+    }
+
+    .container {
+        display: grid; 
+        grid-template-columns:repeat(6, 1fr);
+        grid-template-rows:repeat(5, 1fr); 
+        grid-template-areas:
+        "box1 box1 box1 box2 box2 box2"
+        "box1 box1 box1 box2 box2 box2"
+        "box1 box1 box1 box4 box4 box4"
+        "box3 box3 box3 box4 box4 box4"
+        "box3 box3 box3 box4 box4 box4";
+        /* "box1 box1 box1 box2 box2"
+        "box1 box1 box1 box2 box2"
+        "box3 box3 box4 box4"
+        "box3 box3 box4 box4"; */
+        height: 1058px;
+    }
+
+    .box1 { grid-area: box1; }
+    .box2 { grid-area: box2; }
+    .box3 { grid-area: box3; }
+    .box4 { grid-area: box4; }
+
+    .container > div {
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+
+
+    .container > .box1 > img, .container > .box4 > img {
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .container > .box2 > img, .container > .box3 > img {
+        display: flex;
+        box-sizing: border-box;
+        
+    }
+
+    .container > div > img {
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        scale: 1.1;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+    }
+
+    .container > div > img:hover {
+        scale:1;
+    }
+
+    .mobile_screen {
+        margin:0 auto;
+    }
+
+    .app-play-store > a {
+        transition: 0.5s ease-in-out;
+    }
+
+    .app-play-store > a:hover {
+        background: var(--Background-Container, #665F55);
+    }
+
+    .app-play-store > a:hover i {
+        color: #E1D4C9;
+    }
+
+    .app-play-store > a:hover .availaible {
+        color: #E1D4C9;
+    }
+
+}
+
+@media screen and (min-width:1080px) {
+    #mobile{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+    }
+}

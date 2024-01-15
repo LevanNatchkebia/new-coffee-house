@@ -1,5 +1,6 @@
 let selectedCategory = 'coffee';
 const filters = document.querySelector('.menu_list');
+const loadMoreButton = document.querySelector('.load-more');
 
 const resetProductsSection = (node) => {
     while(node.firstChild) {
@@ -13,10 +14,28 @@ const getProducts = async () => {
     return productsJson;
 };
 
+const handleProductModalOpen = (product) => {
+    const modalWrapper = document.querySelector('.modal_wrapper');
+    modalWrapper.style.display = 'block';
+    
+    const productImage = modalWrapper.querySelector('.product_modal_image');
+    const productTitle = modalWrapper.querySelector('.product_title');
+    const productDescription = modalWrapper.querySelector('.product_description');
+    const productSizes = modalWrapper.querySelectorAll('.product_size');
+    const productAdditives = modalWrapper.querySelectorAll('.additive');
+    const totalPrice = document.querySelector('.total_price')
+
+    const modalCloseButton = modalWrapper.querySelector('.close_modal_button');
+    modalCloseButton.addEventListener('click', () => {
+        modalWrapper.style.display = 'none';
+    });
+};
+
 const renderProducts = (products, productsContainer) => {
 
-    products.forEach((product) => {
+    products.forEach((product, index) => {
         const productCard = document.createElement('div');
+        productCard.className = `product_card ${index > 3 ? 'hidden' : ''}`
         productCard.classList.add('product_card');
 
         const imageDiv = document.createElement('div');
@@ -48,6 +67,8 @@ const renderProducts = (products, productsContainer) => {
 
         productsContainer.appendChild(productCard);
 
+        productCard.addEventListener('click', () => handleProductModalOpen(product));
+
     });
 };
 
@@ -76,6 +97,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                     productFilter.classList.add('selected')
                 }
             });
+        });
+    });
+
+    loadMoreButton.addEventListener('click', () => {
+        const productCards = document.querySelectorAll('.product_card');
+        const cardsToShow = [].slice.call(productCards, 4);
+
+        cardsToShow.forEach((card) => {
+            card.classList.toggle('hidden');
         });
     });
 });

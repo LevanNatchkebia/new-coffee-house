@@ -14,6 +14,7 @@ main {
     flex-direction: column;
     gap: 40px;
     border-radius: 40px;
+    width: 100%;
 }
 
 h1 {
@@ -87,14 +88,30 @@ h2 > span {
     font-style: italic;
 }
 
-.slider {
+.whole_slider_div {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.subdiv {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 40px;
     margin-bottom: 20px;
+    
 }
+
 
 
 .slider_text {
@@ -126,7 +143,6 @@ h2 > span {
 .price {
     text-align: center;
     color: var(--Text-Dark, #403F3D);
-    text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 24px;
     font-style: normal;
@@ -139,13 +155,17 @@ h2 > span {
     gap: 12px;
 }
 
-.marks > div {
+.mark{
     width: 40px;
     height: 4px;
     border-radius: 100px;
     background: var(--Border-Light, #C1B6AD);
     margin-top: 40px;
     cursor: pointer;
+}
+
+.activeMark {
+    background: var(--Border-Dark, #665F55);
 }
 
 #about {
@@ -165,7 +185,7 @@ h2 > span {
     overflow: hidden;
 }
 
-.container > div {
+.box1, .box2, .box3, .box4 {
     border-radius: 1.22rem;
     display: flex;
     justify-content: center;
@@ -173,6 +193,8 @@ h2 > span {
     width: 100%;
     overflow: hidden;
 }
+
+
 
 .container > div > img {
     scale: 1.23;
@@ -226,7 +248,6 @@ h2 > span {
 
 .available {
     color: var(--Text-Dark, #403F3D);
-    text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 10px;
     font-style: normal;
@@ -248,3 +269,9 @@ h2 > span {
     width: 100%;
     margin-top: 20px;
 }
+
+.desktop {
+    display: none;
+} 
+
+

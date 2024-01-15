@@ -10,7 +10,7 @@ html {
 
 body {
     margin: 0 auto;
-    max-width: 1320px;
+    max-width: 1395px;
     font-family: 'Inter', sans-serif;
     padding: 20px 16px;
     display: flex;
@@ -19,6 +19,9 @@ body {
     background-color: #E1D4C9;
 }
 
+.tablet, .desktop {
+    display: none;
+}
 
 .header_section {
     display: flex;
@@ -28,7 +31,6 @@ body {
 
 .header_grid {
     display: grid;
-    height: 100%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: 
@@ -172,6 +174,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    width: 530px;
 }
 
 .footer_part1 > h2 {
@@ -239,4 +242,80 @@ footer {
     line-height: 125%;
     margin-bottom: 40px;
     margin-top: 40px;
+}
+
+@media screen and (min-width:600px) and (max-width:768px) {
+    body {
+        padding: 20px 40px;
+    }
+    footer {
+        padding: 100px 60px;
+    }
+    .social {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:2250px) {
+    footer {
+        padding: 100px 100px;
+        display: flex;
+        gap: 100px;
+    };
+
+    .footer_part1 {
+        width: 530px;
+    }
+
+    .burger_btn{
+        display: none;
+    }
+    .navigation_bar {
+        display: flex;
+        width: 65.7%;
+        align-items: center;
+    }
+    .navigation_bar > ul {
+        display: flex;
+        align-self: center;
+        gap: 40px;
+        width: 100%;
+        align-items: center;
+    }
+    .header_section {
+        justify-content: flex-start;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menuLink {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--Text-Dark, #403F3D);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: 0;
+        justify-self: end;
+        transition: 0.5s ease-in-out;
+    }
+
+    .menuSectionBtn {
+        transition: 0.4s ease-in-out;
+
+    }
+    .menuSectionBtn > i {
+        display: none;
+    }
+
+    .menuSectionBtn:hover {
+        scale:1.1;
+    }
+    .menuSectionBtn:hover i {
+        display: inline-block;
+    }
+
+
 }
